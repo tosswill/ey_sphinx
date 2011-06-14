@@ -2,7 +2,7 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.xml
   def index
-    @stories = Story.all
+    @stories = Story.search params[:search]
 
     respond_to do |format|
       format.html # index.html.erb
