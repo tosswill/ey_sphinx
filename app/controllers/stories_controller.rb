@@ -2,8 +2,8 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.xml
   def index
-    #@stories = Story.search params[:search] , :ignore_errors => true
-      @stories = Story.all
+    @stories = Story.search params[:search] , :ignore_errors => true
+    #@stories = Story.all
 
     respond_to do |format|
       format.html # index.html.erb
