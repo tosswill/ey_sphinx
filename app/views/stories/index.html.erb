@@ -5,23 +5,13 @@
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @stories.each do |story| %>
-  <tr>
-    <td><%= story.title %></td>
-    <td><%= story.body %></td>
-    <td><%= link_to 'Show', story %></td>
-    <td><%= link_to 'Edit', edit_story_path(story) %></td>
-    <td><%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div>
+    <h3><%= story.title %></h3>
+    <p><%= story.body %></p>
+
+  </div>
 <% end %>
 </table>
 
